@@ -8,5 +8,7 @@ declare namespace NodeJS {
     DB_PORT: number;
 
     NUM_OF_IDS_PER_REQUEST: number;
+
+    SERVER_PORT: number;
   }
 }

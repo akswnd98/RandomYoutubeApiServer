@@ -17,4 +17,6 @@ app.get('/randomYoutubeIds', async (req, res: Response<GetRandomYoutubeIdsRespon
   }
 });
 
-app.listen(11000);
+app.listen(process.env.SERVER_PORT, () => {
+  console.log(`started on port ${process.env.SERVER_PORT}`);
+});
