@@ -1,5 +1,7 @@
 declare namespace NodeJS {
   interface ProcessEnv {
+    NODE_ENV: 'development' | 'production';
+
     DB_DIALECT: 'mariadb' | 'mysql' | 'postgres';
     DB_NAME: string;
     DB_USER: string;

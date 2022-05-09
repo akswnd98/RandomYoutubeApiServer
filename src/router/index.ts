@@ -2,6 +2,7 @@ import express, { Response } from 'express';
 import NodeModel from '@/src/db/Node';
 import sequelize from '../db';
 import { GetRandomYoutubeIdsResponse } from '../common';
+import winstonLogger from '@/src/winstonLogger';
 
 const app = express();
 
@@ -18,5 +19,5 @@ app.get('/randomYoutubeIds', async (req, res: Response<GetRandomYoutubeIdsRespon
 });
 
 app.listen(process.env.SERVER_PORT, () => {
-  console.log(`started on port ${process.env.SERVER_PORT}`);
+  winstonLogger.info(`started on port ${process.env.SERVER_PORT}`);
 });
